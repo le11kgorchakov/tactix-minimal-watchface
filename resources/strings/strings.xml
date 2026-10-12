@@ -1,0 +1,43 @@
+<strings>
+    <string id="AppName">Tactix Minimal</string>
+    <string id="CustomizeTitle">Customize</string>
+
+    <string id="AccentColorTitle">Accent Color</string>
+    <string id="HoursColorTitle">Hours Color</string>
+    <string id="MinutesColorTitle">Minutes Color</string>
+    <string id="TimeFontTitle">Time Font</string>
+    <string id="HoursSizeTitle">Hours Size</string>
+    <string id="MinutesSizeTitle">Minutes Size</string>
+    <string id="ShowColonTitle">Show Colon</string>
+    <string id="DateFormatTitle">Date Format</string>
+    <string id="TimeFormatTitle">Time Format</string>
+    <string id="ShowBatteryDaysTitle">Battery Days Left</string>
+    <string id="ShowBatteryArcTitle">Battery Arc</string>
+    <string id="ShowTicksTitle">Tick Marks</string>
+
+    <string id="ColorOlive">Olive Green</string>
+    <string id="ColorOrange">Tactical Orange</string>
+    <string id="ColorCyan">High-Vis Cyan</string>
+    <string id="ColorWhite">White</string>
+    <string id="ColorRed">Red</string>
+    <string id="ColorLightGrey">Light Grey</string>
+    <string id="ColorMatchAccent">Match Accent</string>
+
+    <string id="FontCondensed">Condensed</string>
+    <string id="FontBold">Bold</string>
+    <string id="FontRegular">Regular</string>
+
+    <string id="SizeSmall">Small</string>
+    <string id="SizeMedium">Medium</string>
+    <string id="SizeLarge">Large</string>
+    <string id="SizeExtraLarge">Extra Large</string>
+
+    <string id="DateFormat0">MON · OCT 12</string>
+    <string id="DateFormat1">Monday, Oct 12</string>
+    <string id="DateFormat2">12 / OCT</string>
+    <string id="DateFormat3">YYYY-MM-DD</string>
+    <string id="DateFormat4">MM/DD/YY</string>
+
+    <string id="TimeFormatSystem">Follow System</string>
+    <string id="TimeFormat24">Military (24h)</string>
+</strings>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<iq:manifest xmlns:iq="http://www.garmin.com/xml/connectiq" version="3">
+    <iq:application id="E1C10AE4DADC4FB38E6A467045551EA1" type="watchface" name="@Strings.AppName" entry="TactixMinimalApp" launcherIcon="@Drawables.LauncherIcon" minApiLevel="3.2.0">
+        <iq:products>
+            <!-- tactix 7 / tactix 7 Pro (280x280 MIP) ship under the fenix 7X device definition. -->
+            <iq:product id="fenix7x"/>
+        </iq:products>
+        <iq:permissions/>
+        <iq:languages>
+            <iq:language>eng</iq:language>
+        </iq:languages>
+        <iq:barrels/>
+    </iq:application>
+</iq:manifest>

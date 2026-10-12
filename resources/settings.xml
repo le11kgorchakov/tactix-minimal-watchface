@@ -1,0 +1,83 @@
+<settings>
+    <setting propertyKey="@Properties.AccentColor" title="@Strings.AccentColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorOlive</listEntry>
+            <listEntry value="1">@Strings.ColorOrange</listEntry>
+            <listEntry value="2">@Strings.ColorCyan</listEntry>
+            <listEntry value="3">@Strings.ColorWhite</listEntry>
+            <listEntry value="4">@Strings.ColorRed</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.HoursColor" title="@Strings.HoursColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorMatchAccent</listEntry>
+            <listEntry value="1">@Strings.ColorWhite</listEntry>
+            <listEntry value="2">@Strings.ColorLightGrey</listEntry>
+            <listEntry value="3">@Strings.ColorOlive</listEntry>
+            <listEntry value="4">@Strings.ColorOrange</listEntry>
+            <listEntry value="5">@Strings.ColorCyan</listEntry>
+            <listEntry value="6">@Strings.ColorRed</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.MinutesColor" title="@Strings.MinutesColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorMatchAccent</listEntry>
+            <listEntry value="1">@Strings.ColorWhite</listEntry>
+            <listEntry value="2">@Strings.ColorLightGrey</listEntry>
+            <listEntry value="3">@Strings.ColorOlive</listEntry>
+            <listEntry value="4">@Strings.ColorOrange</listEntry>
+            <listEntry value="5">@Strings.ColorCyan</listEntry>
+            <listEntry value="6">@Strings.ColorRed</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.TimeFont" title="@Strings.TimeFontTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.FontCondensed</listEntry>
+            <listEntry value="1">@Strings.FontBold</listEntry>
+            <listEntry value="2">@Strings.FontRegular</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.HoursSize" title="@Strings.HoursSizeTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.SizeSmall</listEntry>
+            <listEntry value="1">@Strings.SizeMedium</listEntry>
+            <listEntry value="2">@Strings.SizeLarge</listEntry>
+            <listEntry value="3">@Strings.SizeExtraLarge</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.MinutesSize" title="@Strings.MinutesSizeTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.SizeSmall</listEntry>
+            <listEntry value="1">@Strings.SizeMedium</listEntry>
+            <listEntry value="2">@Strings.SizeLarge</listEntry>
+            <listEntry value="3">@Strings.SizeExtraLarge</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.ShowColon" title="@Strings.ShowColonTitle">
+        <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.DateFormat" title="@Strings.DateFormatTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.DateFormat0</listEntry>
+            <listEntry value="1">@Strings.DateFormat1</listEntry>
+            <listEntry value="2">@Strings.DateFormat2</listEntry>
+            <listEntry value="3">@Strings.DateFormat3</listEntry>
+            <listEntry value="4">@Strings.DateFormat4</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.TimeFormat" title="@Strings.TimeFormatTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.TimeFormatSystem</listEntry>
+            <listEntry value="1">@Strings.TimeFormat24</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.ShowBatteryDays" title="@Strings.ShowBatteryDaysTitle">
+        <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.ShowBatteryArc" title="@Strings.ShowBatteryArcTitle">
+        <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.ShowTicks" title="@Strings.ShowTicksTitle">
+        <settingConfig type="boolean" />
+    </setting>
+</settings>

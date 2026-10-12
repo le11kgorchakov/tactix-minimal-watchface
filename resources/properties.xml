@@ -1,0 +1,20 @@
+<properties>
+    <!-- 0 Olive Green, 1 Tactical Orange, 2 High-Vis Cyan, 3 White, 4 Red -->
+    <property id="AccentColor" type="number">1</property>
+    <!-- 0 Match accent, 1 White, 2 Light Grey, 3 Olive Green, 4 Tactical Orange, 5 High-Vis Cyan, 6 Red -->
+    <property id="HoursColor" type="number">1</property>
+    <property id="MinutesColor" type="number">1</property>
+    <!-- 0 Condensed, 1 Bold, 2 Regular -->
+    <property id="TimeFont" type="number">0</property>
+    <!-- 0 Small, 1 Medium, 2 Large, 3 Extra Large -->
+    <property id="HoursSize" type="number">2</property>
+    <property id="MinutesSize" type="number">2</property>
+    <property id="ShowColon" type="boolean">true</property>
+    <!-- 0 MON · OCT 12, 1 Monday, Oct 12, 2 12 / OCT, 3 YYYY-MM-DD, 4 MM/DD/YY -->
+    <property id="DateFormat" type="number">0</property>
+    <!-- 0 Follow system, 1 Military (24h) -->
+    <property id="TimeFormat" type="number">1</property>
+    <property id="ShowBatteryDays" type="boolean">true</property>
+    <property id="ShowBatteryArc" type="boolean">true</property>
+    <property id="ShowTicks" type="boolean">true</property>
+</properties>
