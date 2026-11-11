@@ -6,6 +6,9 @@ import Toybox.WatchUi;
 module SettingsOptions {
 
     function forKey(key as String) as Array<ResourceId> {
+        if (key.equals(Settings.DISPLAY_MODE)) {
+            return [Rez.Strings.DisplayModeDigital, Rez.Strings.DisplayModeAnalog];
+        }
         if (key.equals(Settings.ACCENT_COLOR)) {
             return [Rez.Strings.ColorOlive, Rez.Strings.ColorOrange, Rez.Strings.ColorCyan, Rez.Strings.ColorWhite, Rez.Strings.ColorRed];
         }
@@ -34,6 +37,7 @@ class SettingsMenu extends WatchUi.Menu2 {
 
     function initialize() {
         Menu2.initialize({:title => Rez.Strings.CustomizeTitle});
+        addList(Settings.DISPLAY_MODE, Rez.Strings.DisplayModeTitle);
         addList(Settings.ACCENT_COLOR, Rez.Strings.AccentColorTitle);
         addList(Settings.HOURS_COLOR, Rez.Strings.HoursColorTitle);
         addList(Settings.MINUTES_COLOR, Rez.Strings.MinutesColorTitle);
@@ -41,8 +45,10 @@ class SettingsMenu extends WatchUi.Menu2 {
         addList(Settings.HOURS_SIZE, Rez.Strings.HoursSizeTitle);
         addList(Settings.MINUTES_SIZE, Rez.Strings.MinutesSizeTitle);
         addToggle(Settings.SHOW_COLON, Rez.Strings.ShowColonTitle);
+        addToggle(Settings.SHOW_DATE, Rez.Strings.ShowDateTitle);
         addList(Settings.DATE_FORMAT, Rez.Strings.DateFormatTitle);
         addList(Settings.TIME_FORMAT, Rez.Strings.TimeFormatTitle);
+        addToggle(Settings.SHOW_BATTERY, Rez.Strings.ShowBatteryTitle);
         addToggle(Settings.SHOW_BATTERY_DAYS, Rez.Strings.ShowBatteryDaysTitle);
         addToggle(Settings.SHOW_BATTERY_ARC, Rez.Strings.ShowBatteryArcTitle);
         addToggle(Settings.SHOW_TICKS, Rez.Strings.ShowTicksTitle);

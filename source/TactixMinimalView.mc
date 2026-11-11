@@ -31,6 +31,15 @@ class TactixMinimalView extends WatchUi.WatchFace {
     private const TICK_LENGTH = 7;
     private const TICK_PEN = 2;
 
+    private const CARDINAL_DOT_INSET = 14;
+    private const CARDINAL_DOT_RADIUS = 2;
+
+    private const HOUR_HAND_RATIO = 0.52;
+    private const MINUTE_HAND_RATIO = 0.74;
+    private const HOUR_HAND_PEN = 5;
+    private const MINUTE_HAND_PEN = 3;
+    private const HUB_RADIUS = 4;
+
     private const BATTERY_WIDTH = 22;
     private const BATTERY_HEIGHT = 12;
     private const BATTERY_NUB = 3;
@@ -47,6 +56,8 @@ class TactixMinimalView extends WatchUi.WatchFace {
     private var _cx as Number = 140;
     private var _cy as Number = 140;
     private var _radius as Number = 140;
+    // High-power / backlight-on state from onExitSleep / onEnterSleep.
+    private var _isAwake as Boolean = true;
 
     function initialize() {
         WatchFace.initialize();
@@ -73,20 +84,36 @@ class TactixMinimalView extends WatchUi.WatchFace {
         }
 
         var now = Time.now();
-        dc.setColor(Settings.accentColor, Graphics.COLOR_TRANSPARENT);
-        ensureFonts(dc);
-        dc.drawText(_cx, _cy - _rowOffset, Graphics.FONT_MEDIUM, formatDate(now), CENTER);
+        var analog = Settings.displayMode == Settings.DISPLAY_MODE_ANALOG;
 
-        drawTime(dc, now);
-        drawBatteryRow(dc, stats);
+        if (analog) {
+            drawCardinalDots(dc);
+            drawAnalogHands(dc, now);
+            _rowOffset = ROW_OFFSET;
+        } else {
+            ensureFonts(dc);
+            drawTime(dc, now);
+        }
+
+        // Date and battery row only while the display is in high-power (backlight) mode.
+        if (_isAwake && Settings.showDate) {
+            dc.setColor(Settings.accentColor, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(_cx, _cy - _rowOffset, Graphics.FONT_MEDIUM, formatDate(now), CENTER);
+        }
+        if (_isAwake && Settings.showBattery) {
+            drawBatteryRow(dc, stats);
+        }
     }
 
-    // Updates are minute-based in both modes; waking only forces a fresh frame.
+    // High-power / backlight on; show date and battery again.
     function onExitSleep() as Void {
+        _isAwake = true;
         WatchUi.requestUpdate();
     }
 
+    // Low-power / backlight off; hide date and battery to keep the AOD clean.
     function onEnterSleep() as Void {
+        _isAwake = false;
         WatchUi.requestUpdate();
     }
 
@@ -114,6 +141,41 @@ class TactixMinimalView extends WatchUi.WatchFace {
 
         dc.setColor(Settings.minutesColor, Graphics.COLOR_TRANSPARENT);
         dc.drawText(x + hoursWidth + colonWidth, baseline - Graphics.getFontAscent(_minutesFont), _minutesFont, minutes, Graphics.TEXT_JUSTIFY_LEFT);
+    }
+
+    private function drawAnalogHands(dc as Graphics.Dc, now as Time.Moment) as Void {
+        var info = Gregorian.info(now, Time.FORMAT_SHORT);
+        var hour = (info.hour as Number) % 12;
+        var minute = info.min as Number;
+
+        var minuteAngle = Math.PI * 2 * minute / 60.0;
+        var hourAngle = Math.PI * 2 * hour / 12.0 + minuteAngle / 12.0;
+
+        drawHand(dc, minuteAngle, (_radius * MINUTE_HAND_RATIO).toNumber(), MINUTE_HAND_PEN, Settings.minutesColor);
+        drawHand(dc, hourAngle, (_radius * HOUR_HAND_RATIO).toNumber(), HOUR_HAND_PEN, Settings.hoursColor);
+
+        dc.setColor(Settings.hoursColor, Graphics.COLOR_TRANSPARENT);
+        dc.fillCircle(_cx, _cy, HUB_RADIUS);
+    }
+
+    private function drawHand(dc as Graphics.Dc, angle as Float, length as Number, pen as Number, color as Number) as Void {
+        var sin = Math.sin(angle);
+        var cos = Math.cos(angle);
+        dc.setColor(color, Graphics.COLOR_TRANSPARENT);
+        dc.setPenWidth(pen);
+        dc.drawLine(_cx, _cy, (_cx + length * sin).toNumber(), (_cy - length * cos).toNumber());
+        dc.setPenWidth(1);
+    }
+
+    private function drawCardinalDots(dc as Graphics.Dc) as Void {
+        var r = _radius - CARDINAL_DOT_INSET;
+        for (var i = 0; i < 4; i++) {
+            var angle = Math.PI * 2 * i / 4.0;
+            var x = (_cx + r * Math.sin(angle)).toNumber();
+            var y = (_cy - r * Math.cos(angle)).toNumber();
+            dc.setColor(i == 0 ? Settings.accentColor : TRACK_COLOR, Graphics.COLOR_TRANSPARENT);
+            dc.fillCircle(x, y, CARDINAL_DOT_RADIUS);
+        }
     }
 
     private function formatHours(hour as Number) as String {

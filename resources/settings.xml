@@ -1,4 +1,10 @@
 <settings>
+    <setting propertyKey="@Properties.DisplayMode" title="@Strings.DisplayModeTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.DisplayModeDigital</listEntry>
+            <listEntry value="1">@Strings.DisplayModeAnalog</listEntry>
+        </settingConfig>
+    </setting>
     <setting propertyKey="@Properties.AccentColor" title="@Strings.AccentColorTitle">
         <settingConfig type="list">
             <listEntry value="0">@Strings.ColorOlive</listEntry>
@@ -56,6 +62,9 @@
     <setting propertyKey="@Properties.ShowColon" title="@Strings.ShowColonTitle">
         <settingConfig type="boolean" />
     </setting>
+    <setting propertyKey="@Properties.ShowDate" title="@Strings.ShowDateTitle">
+        <settingConfig type="boolean" />
+    </setting>
     <setting propertyKey="@Properties.DateFormat" title="@Strings.DateFormatTitle">
         <settingConfig type="list">
             <listEntry value="0">@Strings.DateFormat0</listEntry>
@@ -70,6 +79,9 @@
             <listEntry value="0">@Strings.TimeFormatSystem</listEntry>
             <listEntry value="1">@Strings.TimeFormat24</listEntry>
         </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.ShowBattery" title="@Strings.ShowBatteryTitle">
+        <settingConfig type="boolean" />
     </setting>
     <setting propertyKey="@Properties.ShowBatteryDays" title="@Strings.ShowBatteryDaysTitle">
         <settingConfig type="boolean" />

@@ -2,6 +2,9 @@
     <string id="AppName">Tactix Minimal</string>
     <string id="CustomizeTitle">Customize</string>
 
+    <string id="DisplayModeTitle">Display Mode</string>
+    <string id="DisplayModeDigital">Digital</string>
+    <string id="DisplayModeAnalog">Analog</string>
     <string id="AccentColorTitle">Accent Color</string>
     <string id="HoursColorTitle">Hours Color</string>
     <string id="MinutesColorTitle">Minutes Color</string>
@@ -9,8 +12,10 @@
     <string id="HoursSizeTitle">Hours Size</string>
     <string id="MinutesSizeTitle">Minutes Size</string>
     <string id="ShowColonTitle">Show Colon</string>
+    <string id="ShowDateTitle">Show Date</string>
     <string id="DateFormatTitle">Date Format</string>
     <string id="TimeFormatTitle">Time Format</string>
+    <string id="ShowBatteryTitle">Show Battery</string>
     <string id="ShowBatteryDaysTitle">Battery Days Left</string>
     <string id="ShowBatteryArcTitle">Battery Arc</string>
     <string id="ShowTicksTitle">Tick Marks</string>
