@@ -1,8 +1,18 @@
 <settings>
+    <setting propertyKey="@Properties.Style" title="@Strings.StyleTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.StyleTactix</listEntry>
+            <listEntry value="1">@Strings.StyleMilitary</listEntry>
+            <listEntry value="2">@Strings.StyleCasual</listEntry>
+            <listEntry value="3">@Strings.StyleSport</listEntry>
+            <listEntry value="4">@Strings.StyleStealth</listEntry>
+        </settingConfig>
+    </setting>
     <setting propertyKey="@Properties.DisplayMode" title="@Strings.DisplayModeTitle">
         <settingConfig type="list">
             <listEntry value="0">@Strings.DisplayModeDigital</listEntry>
             <listEntry value="1">@Strings.DisplayModeAnalog</listEntry>
+            <listEntry value="2">@Strings.DisplayModeHybrid</listEntry>
         </settingConfig>
     </setting>
     <setting propertyKey="@Properties.AccentColor" title="@Strings.AccentColorTitle">
@@ -12,6 +22,11 @@
             <listEntry value="2">@Strings.ColorCyan</listEntry>
             <listEntry value="3">@Strings.ColorWhite</listEntry>
             <listEntry value="4">@Strings.ColorRed</listEntry>
+            <listEntry value="5">@Strings.ColorBlue</listEntry>
+            <listEntry value="6">@Strings.ColorYellow</listEntry>
+            <listEntry value="7">@Strings.ColorPurple</listEntry>
+            <listEntry value="8">@Strings.ColorGreen</listEntry>
+            <listEntry value="9">@Strings.ColorBlack</listEntry>
         </settingConfig>
     </setting>
     <setting propertyKey="@Properties.HoursColor" title="@Strings.HoursColorTitle">
@@ -23,6 +38,15 @@
             <listEntry value="4">@Strings.ColorOrange</listEntry>
             <listEntry value="5">@Strings.ColorCyan</listEntry>
             <listEntry value="6">@Strings.ColorRed</listEntry>
+            <listEntry value="7">@Strings.ColorCream</listEntry>
+            <listEntry value="8">@Strings.ColorBlue</listEntry>
+            <listEntry value="9">@Strings.ColorYellow</listEntry>
+            <listEntry value="10">@Strings.ColorPurple</listEntry>
+            <listEntry value="11">@Strings.ColorGreen</listEntry>
+            <listEntry value="12">@Strings.ColorBlack</listEntry>
+            <listEntry value="13">@Strings.ColorNavy</listEntry>
+            <listEntry value="14">@Strings.ColorPink</listEntry>
+            <listEntry value="15">@Strings.ColorAmber</listEntry>
         </settingConfig>
     </setting>
     <setting propertyKey="@Properties.MinutesColor" title="@Strings.MinutesColorTitle">
@@ -34,6 +58,15 @@
             <listEntry value="4">@Strings.ColorOrange</listEntry>
             <listEntry value="5">@Strings.ColorCyan</listEntry>
             <listEntry value="6">@Strings.ColorRed</listEntry>
+            <listEntry value="7">@Strings.ColorCream</listEntry>
+            <listEntry value="8">@Strings.ColorBlue</listEntry>
+            <listEntry value="9">@Strings.ColorYellow</listEntry>
+            <listEntry value="10">@Strings.ColorPurple</listEntry>
+            <listEntry value="11">@Strings.ColorGreen</listEntry>
+            <listEntry value="12">@Strings.ColorBlack</listEntry>
+            <listEntry value="13">@Strings.ColorNavy</listEntry>
+            <listEntry value="14">@Strings.ColorPink</listEntry>
+            <listEntry value="15">@Strings.ColorAmber</listEntry>
         </settingConfig>
     </setting>
     <setting propertyKey="@Properties.TimeFont" title="@Strings.TimeFontTitle">
@@ -41,6 +74,8 @@
             <listEntry value="0">@Strings.FontCondensed</listEntry>
             <listEntry value="1">@Strings.FontBold</listEntry>
             <listEntry value="2">@Strings.FontRegular</listEntry>
+            <listEntry value="3">@Strings.FontRoboto</listEntry>
+            <listEntry value="4">@Strings.FontKosugi</listEntry>
         </settingConfig>
     </setting>
     <setting propertyKey="@Properties.HoursSize" title="@Strings.HoursSizeTitle">
@@ -62,8 +97,35 @@
     <setting propertyKey="@Properties.ShowColon" title="@Strings.ShowColonTitle">
         <settingConfig type="boolean" />
     </setting>
-    <setting propertyKey="@Properties.ShowDate" title="@Strings.ShowDateTitle">
+    <setting propertyKey="@Properties.TimeFormat" title="@Strings.TimeFormatTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.TimeFormatSystem</listEntry>
+            <listEntry value="1">@Strings.TimeFormat24</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.ShowDate" title="@Strings.DateMenuTitle">
         <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.DateColor" title="@Strings.ColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorMatchAccent</listEntry>
+            <listEntry value="1">@Strings.ColorWhite</listEntry>
+            <listEntry value="2">@Strings.ColorLightGrey</listEntry>
+            <listEntry value="3">@Strings.ColorOlive</listEntry>
+            <listEntry value="4">@Strings.ColorOrange</listEntry>
+            <listEntry value="5">@Strings.ColorCyan</listEntry>
+            <listEntry value="6">@Strings.ColorRed</listEntry>
+            <listEntry value="7">@Strings.ColorCream</listEntry>
+            <listEntry value="8">@Strings.ColorBlue</listEntry>
+            <listEntry value="9">@Strings.ColorYellow</listEntry>
+            <listEntry value="10">@Strings.ColorPurple</listEntry>
+            <listEntry value="11">@Strings.ColorGreen</listEntry>
+            <listEntry value="12">@Strings.ColorBlack</listEntry>
+            <listEntry value="13">@Strings.ColorNavy</listEntry>
+            <listEntry value="14">@Strings.ColorPink</listEntry>
+            <listEntry value="15">@Strings.ColorAmber</listEntry>
+        </settingConfig>
     </setting>
     <setting propertyKey="@Properties.DateFormat" title="@Strings.DateFormatTitle">
         <settingConfig type="list">
@@ -74,22 +136,292 @@
             <listEntry value="4">@Strings.DateFormat4</listEntry>
         </settingConfig>
     </setting>
-    <setting propertyKey="@Properties.TimeFormat" title="@Strings.TimeFormatTitle">
-        <settingConfig type="list">
-            <listEntry value="0">@Strings.TimeFormatSystem</listEntry>
-            <listEntry value="1">@Strings.TimeFormat24</listEntry>
-        </settingConfig>
-    </setting>
-    <setting propertyKey="@Properties.ShowBattery" title="@Strings.ShowBatteryTitle">
+
+    <setting propertyKey="@Properties.ShowBattery" title="@Strings.BatteryMenuTitle">
         <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.BatteryColor" title="@Strings.ColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorMatchAccent</listEntry>
+            <listEntry value="1">@Strings.ColorWhite</listEntry>
+            <listEntry value="2">@Strings.ColorLightGrey</listEntry>
+            <listEntry value="3">@Strings.ColorOlive</listEntry>
+            <listEntry value="4">@Strings.ColorOrange</listEntry>
+            <listEntry value="5">@Strings.ColorCyan</listEntry>
+            <listEntry value="6">@Strings.ColorRed</listEntry>
+            <listEntry value="7">@Strings.ColorCream</listEntry>
+            <listEntry value="8">@Strings.ColorBlue</listEntry>
+            <listEntry value="9">@Strings.ColorYellow</listEntry>
+            <listEntry value="10">@Strings.ColorPurple</listEntry>
+            <listEntry value="11">@Strings.ColorGreen</listEntry>
+            <listEntry value="12">@Strings.ColorBlack</listEntry>
+            <listEntry value="13">@Strings.ColorNavy</listEntry>
+            <listEntry value="14">@Strings.ColorPink</listEntry>
+            <listEntry value="15">@Strings.ColorAmber</listEntry>
+        </settingConfig>
     </setting>
     <setting propertyKey="@Properties.ShowBatteryDays" title="@Strings.ShowBatteryDaysTitle">
         <settingConfig type="boolean" />
     </setting>
-    <setting propertyKey="@Properties.ShowBatteryArc" title="@Strings.ShowBatteryArcTitle">
+    <setting propertyKey="@Properties.ShowSecondsArc" title="@Strings.ShowSecondsArcTitle">
         <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.SecondsColor" title="@Strings.SecondsColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorMatchAccent</listEntry>
+            <listEntry value="1">@Strings.ColorWhite</listEntry>
+            <listEntry value="2">@Strings.ColorLightGrey</listEntry>
+            <listEntry value="3">@Strings.ColorOlive</listEntry>
+            <listEntry value="4">@Strings.ColorOrange</listEntry>
+            <listEntry value="5">@Strings.ColorCyan</listEntry>
+            <listEntry value="6">@Strings.ColorRed</listEntry>
+            <listEntry value="7">@Strings.ColorCream</listEntry>
+            <listEntry value="8">@Strings.ColorBlue</listEntry>
+            <listEntry value="9">@Strings.ColorYellow</listEntry>
+            <listEntry value="10">@Strings.ColorPurple</listEntry>
+            <listEntry value="11">@Strings.ColorGreen</listEntry>
+            <listEntry value="12">@Strings.ColorBlack</listEntry>
+            <listEntry value="13">@Strings.ColorNavy</listEntry>
+            <listEntry value="14">@Strings.ColorPink</listEntry>
+            <listEntry value="15">@Strings.ColorAmber</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.ShowSteps" title="@Strings.StepsMenuTitle">
+        <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.StepsColor" title="@Strings.ColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorMatchAccent</listEntry>
+            <listEntry value="1">@Strings.ColorWhite</listEntry>
+            <listEntry value="2">@Strings.ColorLightGrey</listEntry>
+            <listEntry value="3">@Strings.ColorOlive</listEntry>
+            <listEntry value="4">@Strings.ColorOrange</listEntry>
+            <listEntry value="5">@Strings.ColorCyan</listEntry>
+            <listEntry value="6">@Strings.ColorRed</listEntry>
+            <listEntry value="7">@Strings.ColorCream</listEntry>
+            <listEntry value="8">@Strings.ColorBlue</listEntry>
+            <listEntry value="9">@Strings.ColorYellow</listEntry>
+            <listEntry value="10">@Strings.ColorPurple</listEntry>
+            <listEntry value="11">@Strings.ColorGreen</listEntry>
+            <listEntry value="12">@Strings.ColorBlack</listEntry>
+            <listEntry value="13">@Strings.ColorNavy</listEntry>
+            <listEntry value="14">@Strings.ColorPink</listEntry>
+            <listEntry value="15">@Strings.ColorAmber</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.ShowStepsArc" title="@Strings.ShowStepsArcTitle">
+        <settingConfig type="boolean" />
+    </setting>
+
+    <setting propertyKey="@Properties.ShowHr" title="@Strings.HrMenuTitle">
+        <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.HrColor" title="@Strings.ColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorMatchAccent</listEntry>
+            <listEntry value="1">@Strings.ColorWhite</listEntry>
+            <listEntry value="2">@Strings.ColorLightGrey</listEntry>
+            <listEntry value="3">@Strings.ColorOlive</listEntry>
+            <listEntry value="4">@Strings.ColorOrange</listEntry>
+            <listEntry value="5">@Strings.ColorCyan</listEntry>
+            <listEntry value="6">@Strings.ColorRed</listEntry>
+            <listEntry value="7">@Strings.ColorCream</listEntry>
+            <listEntry value="8">@Strings.ColorBlue</listEntry>
+            <listEntry value="9">@Strings.ColorYellow</listEntry>
+            <listEntry value="10">@Strings.ColorPurple</listEntry>
+            <listEntry value="11">@Strings.ColorGreen</listEntry>
+            <listEntry value="12">@Strings.ColorBlack</listEntry>
+            <listEntry value="13">@Strings.ColorNavy</listEntry>
+            <listEntry value="14">@Strings.ColorPink</listEntry>
+            <listEntry value="15">@Strings.ColorAmber</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.ShowCalories" title="@Strings.CaloriesMenuTitle">
+        <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.CaloriesColor" title="@Strings.ColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorMatchAccent</listEntry>
+            <listEntry value="1">@Strings.ColorWhite</listEntry>
+            <listEntry value="2">@Strings.ColorLightGrey</listEntry>
+            <listEntry value="3">@Strings.ColorOlive</listEntry>
+            <listEntry value="4">@Strings.ColorOrange</listEntry>
+            <listEntry value="5">@Strings.ColorCyan</listEntry>
+            <listEntry value="6">@Strings.ColorRed</listEntry>
+            <listEntry value="7">@Strings.ColorCream</listEntry>
+            <listEntry value="8">@Strings.ColorBlue</listEntry>
+            <listEntry value="9">@Strings.ColorYellow</listEntry>
+            <listEntry value="10">@Strings.ColorPurple</listEntry>
+            <listEntry value="11">@Strings.ColorGreen</listEntry>
+            <listEntry value="12">@Strings.ColorBlack</listEntry>
+            <listEntry value="13">@Strings.ColorNavy</listEntry>
+            <listEntry value="14">@Strings.ColorPink</listEntry>
+            <listEntry value="15">@Strings.ColorAmber</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.ShowDistance" title="@Strings.DistanceMenuTitle">
+        <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.DistanceColor" title="@Strings.ColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorMatchAccent</listEntry>
+            <listEntry value="1">@Strings.ColorWhite</listEntry>
+            <listEntry value="2">@Strings.ColorLightGrey</listEntry>
+            <listEntry value="3">@Strings.ColorOlive</listEntry>
+            <listEntry value="4">@Strings.ColorOrange</listEntry>
+            <listEntry value="5">@Strings.ColorCyan</listEntry>
+            <listEntry value="6">@Strings.ColorRed</listEntry>
+            <listEntry value="7">@Strings.ColorCream</listEntry>
+            <listEntry value="8">@Strings.ColorBlue</listEntry>
+            <listEntry value="9">@Strings.ColorYellow</listEntry>
+            <listEntry value="10">@Strings.ColorPurple</listEntry>
+            <listEntry value="11">@Strings.ColorGreen</listEntry>
+            <listEntry value="12">@Strings.ColorBlack</listEntry>
+            <listEntry value="13">@Strings.ColorNavy</listEntry>
+            <listEntry value="14">@Strings.ColorPink</listEntry>
+            <listEntry value="15">@Strings.ColorAmber</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.ShowWeather" title="@Strings.WeatherMenuTitle">
+        <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.WeatherColor" title="@Strings.ColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorMatchAccent</listEntry>
+            <listEntry value="1">@Strings.ColorWhite</listEntry>
+            <listEntry value="2">@Strings.ColorLightGrey</listEntry>
+            <listEntry value="3">@Strings.ColorOlive</listEntry>
+            <listEntry value="4">@Strings.ColorOrange</listEntry>
+            <listEntry value="5">@Strings.ColorCyan</listEntry>
+            <listEntry value="6">@Strings.ColorRed</listEntry>
+            <listEntry value="7">@Strings.ColorCream</listEntry>
+            <listEntry value="8">@Strings.ColorBlue</listEntry>
+            <listEntry value="9">@Strings.ColorYellow</listEntry>
+            <listEntry value="10">@Strings.ColorPurple</listEntry>
+            <listEntry value="11">@Strings.ColorGreen</listEntry>
+            <listEntry value="12">@Strings.ColorBlack</listEntry>
+            <listEntry value="13">@Strings.ColorNavy</listEntry>
+            <listEntry value="14">@Strings.ColorPink</listEntry>
+            <listEntry value="15">@Strings.ColorAmber</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.ShowSun" title="@Strings.SunMenuTitle">
+        <settingConfig type="boolean" />
+    </setting>
+    <setting propertyKey="@Properties.SunColor" title="@Strings.ColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.ColorMatchAccent</listEntry>
+            <listEntry value="1">@Strings.ColorWhite</listEntry>
+            <listEntry value="2">@Strings.ColorLightGrey</listEntry>
+            <listEntry value="3">@Strings.ColorOlive</listEntry>
+            <listEntry value="4">@Strings.ColorOrange</listEntry>
+            <listEntry value="5">@Strings.ColorCyan</listEntry>
+            <listEntry value="6">@Strings.ColorRed</listEntry>
+            <listEntry value="7">@Strings.ColorCream</listEntry>
+            <listEntry value="8">@Strings.ColorBlue</listEntry>
+            <listEntry value="9">@Strings.ColorYellow</listEntry>
+            <listEntry value="10">@Strings.ColorPurple</listEntry>
+            <listEntry value="11">@Strings.ColorGreen</listEntry>
+            <listEntry value="12">@Strings.ColorBlack</listEntry>
+            <listEntry value="13">@Strings.ColorNavy</listEntry>
+            <listEntry value="14">@Strings.ColorPink</listEntry>
+            <listEntry value="15">@Strings.ColorAmber</listEntry>
+        </settingConfig>
+    </setting>
+
+    <setting propertyKey="@Properties.DateFont" title="@Strings.FontTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.TextFontCompact</listEntry>
+            <listEntry value="1">@Strings.TextFontStandard</listEntry>
+            <listEntry value="2">@Strings.TextFontComfortable</listEntry>
+            <listEntry value="3">@Strings.TextFontLarge</listEntry>
+            <listEntry value="4">@Strings.TextFontExtraLarge</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.BatteryFont" title="@Strings.FontTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.TextFontCompact</listEntry>
+            <listEntry value="1">@Strings.TextFontStandard</listEntry>
+            <listEntry value="2">@Strings.TextFontComfortable</listEntry>
+            <listEntry value="3">@Strings.TextFontLarge</listEntry>
+            <listEntry value="4">@Strings.TextFontExtraLarge</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.StepsFont" title="@Strings.FontTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.TextFontCompact</listEntry>
+            <listEntry value="1">@Strings.TextFontStandard</listEntry>
+            <listEntry value="2">@Strings.TextFontComfortable</listEntry>
+            <listEntry value="3">@Strings.TextFontLarge</listEntry>
+            <listEntry value="4">@Strings.TextFontExtraLarge</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.HrFont" title="@Strings.FontTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.TextFontCompact</listEntry>
+            <listEntry value="1">@Strings.TextFontStandard</listEntry>
+            <listEntry value="2">@Strings.TextFontComfortable</listEntry>
+            <listEntry value="3">@Strings.TextFontLarge</listEntry>
+            <listEntry value="4">@Strings.TextFontExtraLarge</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.CaloriesFont" title="@Strings.FontTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.TextFontCompact</listEntry>
+            <listEntry value="1">@Strings.TextFontStandard</listEntry>
+            <listEntry value="2">@Strings.TextFontComfortable</listEntry>
+            <listEntry value="3">@Strings.TextFontLarge</listEntry>
+            <listEntry value="4">@Strings.TextFontExtraLarge</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.DistanceFont" title="@Strings.FontTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.TextFontCompact</listEntry>
+            <listEntry value="1">@Strings.TextFontStandard</listEntry>
+            <listEntry value="2">@Strings.TextFontComfortable</listEntry>
+            <listEntry value="3">@Strings.TextFontLarge</listEntry>
+            <listEntry value="4">@Strings.TextFontExtraLarge</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.WeatherFont" title="@Strings.FontTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.TextFontCompact</listEntry>
+            <listEntry value="1">@Strings.TextFontStandard</listEntry>
+            <listEntry value="2">@Strings.TextFontComfortable</listEntry>
+            <listEntry value="3">@Strings.TextFontLarge</listEntry>
+            <listEntry value="4">@Strings.TextFontExtraLarge</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.SunFont" title="@Strings.FontTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.TextFontCompact</listEntry>
+            <listEntry value="1">@Strings.TextFontStandard</listEntry>
+            <listEntry value="2">@Strings.TextFontComfortable</listEntry>
+            <listEntry value="3">@Strings.TextFontLarge</listEntry>
+            <listEntry value="4">@Strings.TextFontExtraLarge</listEntry>
+        </settingConfig>
     </setting>
     <setting propertyKey="@Properties.ShowTicks" title="@Strings.ShowTicksTitle">
         <settingConfig type="boolean" />
+    </setting>
+
+    <setting propertyKey="@Properties.BackgroundColor" title="@Strings.BackgroundColorTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.BgBlack</listEntry>
+            <listEntry value="1">@Strings.BgWhite</listEntry>
+        </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.BackgroundImage" title="@Strings.BackgroundImageTitle">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.BgImageNone</listEntry>
+            <listEntry value="1">@Strings.BgImageBear</listEntry>
+            <listEntry value="2">@Strings.BgImageWolf</listEntry>
+            <listEntry value="3">@Strings.BgImageScope</listEntry>
+        </settingConfig>
     </setting>
 </settings>

@@ -2,35 +2,83 @@
     <string id="AppName">Tactix Minimal</string>
     <string id="CustomizeTitle">Customize</string>
 
+    <string id="StyleTitle">Style</string>
+    <string id="StyleTactix">Tactix</string>
+    <string id="StyleMilitary">Military</string>
+    <string id="StyleCasual">Casual</string>
+    <string id="StyleSport">Sport</string>
+    <string id="StyleStealth">Stealth</string>
+
+    <string id="TimeMenuTitle">Time</string>
+    <string id="DateMenuTitle">Date</string>
+    <string id="BatteryMenuTitle">Battery</string>
+    <string id="StepsMenuTitle">Steps</string>
+    <string id="HrMenuTitle">Heart Rate</string>
+    <string id="CaloriesMenuTitle">Calories</string>
+    <string id="DistanceMenuTitle">Distance</string>
+    <string id="WeatherMenuTitle">Weather</string>
+    <string id="SunMenuTitle">Sunrise / Sunset</string>
+    <string id="ChromeMenuTitle">Chrome</string>
+
     <string id="DisplayModeTitle">Display Mode</string>
     <string id="DisplayModeDigital">Digital</string>
     <string id="DisplayModeAnalog">Analog</string>
+    <string id="DisplayModeHybrid">Hybrid</string>
+
     <string id="AccentColorTitle">Accent Color</string>
     <string id="HoursColorTitle">Hours Color</string>
     <string id="MinutesColorTitle">Minutes Color</string>
     <string id="TimeFontTitle">Time Font</string>
+    <string id="FontTitle">Font</string>
     <string id="HoursSizeTitle">Hours Size</string>
     <string id="MinutesSizeTitle">Minutes Size</string>
     <string id="ShowColonTitle">Show Colon</string>
-    <string id="ShowDateTitle">Show Date</string>
-    <string id="DateFormatTitle">Date Format</string>
     <string id="TimeFormatTitle">Time Format</string>
-    <string id="ShowBatteryTitle">Show Battery</string>
-    <string id="ShowBatteryDaysTitle">Battery Days Left</string>
-    <string id="ShowBatteryArcTitle">Battery Arc</string>
+
+    <string id="ShowTitle">Show</string>
+    <string id="ColorTitle">Color</string>
+    <string id="DateFormatTitle">Date Format</string>
+    <string id="ShowBatteryDaysTitle">Show Days Left</string>
+    <string id="ShowStepsArcTitle">Show Arc</string>
+    <string id="ShowSecondsArcTitle">Seconds Arc</string>
+    <string id="SecondsColorTitle">Seconds Color</string>
     <string id="ShowTicksTitle">Tick Marks</string>
+    <string id="BackgroundColorTitle">Background</string>
+    <string id="BackgroundImageTitle">Background Image</string>
+    <string id="BgBlack">Black</string>
+    <string id="BgWhite">White</string>
+    <string id="BgImageNone">None</string>
+    <string id="BgImageBear">Angry Bear</string>
+    <string id="BgImageWolf">Wolf</string>
+    <string id="BgImageScope">Sniper Scope</string>
 
     <string id="ColorOlive">Olive Green</string>
     <string id="ColorOrange">Tactical Orange</string>
     <string id="ColorCyan">High-Vis Cyan</string>
     <string id="ColorWhite">White</string>
     <string id="ColorRed">Red</string>
+    <string id="ColorCream">Cream</string>
     <string id="ColorLightGrey">Light Grey</string>
     <string id="ColorMatchAccent">Match Accent</string>
+    <string id="ColorBlue">Blue</string>
+    <string id="ColorYellow">Yellow</string>
+    <string id="ColorPurple">Purple</string>
+    <string id="ColorGreen">Green</string>
+    <string id="ColorBlack">Black</string>
+    <string id="ColorNavy">Navy</string>
+    <string id="ColorPink">Pink</string>
+    <string id="ColorAmber">Amber</string>
 
     <string id="FontCondensed">Condensed</string>
     <string id="FontBold">Bold</string>
     <string id="FontRegular">Regular</string>
+    <string id="FontRoboto">Roboto</string>
+    <string id="FontKosugi">Kosugi</string>
+    <string id="TextFontCompact">Compact</string>
+    <string id="TextFontStandard">Standard</string>
+    <string id="TextFontComfortable">Comfortable</string>
+    <string id="TextFontLarge">Large</string>
+    <string id="TextFontExtraLarge">Extra Large</string>
 
     <string id="SizeSmall">Small</string>
     <string id="SizeMedium">Medium</string>

@@ -1,45 +1,69 @@
 # Tactix Minimal
 
-Battery-efficient, customizable Connect IQ watch face for the Garmin tactix 7 / tactix 7 Pro (280x280 MIP). Written in Monkey C.
+Customizable Connect IQ watch face for the Garmin tactix 7 / tactix 7 Pro (280x280 MIP). Written in Monkey C.
 
 There is no `tactix7` Connect IQ device ID; the tactix 7 family ships under `fenix7x`.
 
-## Layout
+## Layout (fixed zones)
 
-- **Digital:** large digital time in the center
-- **Analog:** hour and minute hands plus tiny dots at 12 / 3 / 6 / 9
-- Optional date (accent color) at the top — only while the backlight / high-power display is on
-- Optional battery icon + `82%` or `82% (24d)` at the bottom — same: hidden in low-power always-on mode
-- Optional battery progress arc along the bezel and 12 tick markers
+Nothing stacks on the time digits. Fields only draw in reserved bands:
 
-Redraws once per minute only (no seconds, no partial updates). Settings are cached and re-read only when they change.
+1. **Top** — date, then weather  
+2. **Metrics strip** — HR, steps, calories, battery % (only enabled fields, evenly spaced)  
+3. **Center** — digital time and/or analog hands  
+4. **Bottom** — distance, sunrise/sunset  
+5. **Chrome** — steps arc, battery arc, tick marks  
+
+Extras hide in low-power sleep (backlight off), same as before.
+
+## Real data
+
+Values come from the watch APIs when available:
+
+- Steps / calories / distance — `ActivityMonitor`
+- Heart rate — live activity HR, else recent `SensorHistory`
+- Weather + sunrise/sunset — Garmin weather cache (`Weather` + `Positioning`)
+
+If a sensor has no sample yet, the field shows `--` (or hides weather/sun lines).
 
 ## Settings
 
-| Setting | Options |
-| --- | --- |
-| Display Mode | Digital, Analog |
-| Accent Color | Olive Green, Tactical Orange, High-Vis Cyan, White, Red |
-| Hours Color / Minutes Color | Match Accent, White, Light Grey, Olive Green, Tactical Orange, High-Vis Cyan, Red (digits or hands; colon follows hours) |
-| Time Font | Condensed, Bold, Regular (digital) |
-| Hours Size / Minutes Size | Small, Medium, Large, Extra Large (digital; digits share a baseline; auto-shrinks to stay inside the ticks) |
-| Show Colon | on / off (digital; hours and minutes join when off) |
-| Show Date | on / off |
-| Date Format | `MON · OCT 12`, `Monday, Oct 12`, `12 / OCT`, `YYYY-MM-DD`, `MM/DD/YY` |
-| Time Format | Follow System, Military (24h) (digital) |
-| Show Battery / Battery Days Left / Battery Arc / Tick Marks | on / off |
+Customize is nested. **Style** is first: picking a style applies a full visual preset (colors, arcs, which fields show). You can still override anything afterward.
 
-Change them on the watch (hold UP > Watch Face > Tactix Minimal > Customize) or, when installed from the Connect IQ Store, in the Connect IQ / Garmin Connect phone app. Sideloaded builds only support the on-watch menu.
+| Style | Feel |
+| --- | --- |
+| Tactix | Orange/cyan hybrid, arrow hands, blinking colon |
+| Military | Olive/grey hybrid, syringe field hands, dense hash ring |
+| Casual | Soft cyan/white hybrid, baton hands, cardinal dots |
+| Sport | Red/orange hybrid, sword hands, pulsing seconds arc |
+| Stealth | Cream/grey analog, thin pencil hands, quiet halo |
+
+| Menu | Options |
+| --- | --- |
+| Style | Tactix / Military / Casual / Sport / Stealth |
+| Chrome | Background black/white, images (None / Angry Bear / Wolf / Sniper Scope), accent, seconds arc, ticks |
+| Time | Digital / Analog / Hybrid, expanded color palette, font, sizes, colon, 12/24h |
+| Date | Show, color, format |
+| Battery | Show, color, days left, arc |
+| Steps | Show, color, arc |
+| Heart Rate | Show, color |
+| Calories | Show, color |
+| Distance | Show, color |
+| Weather | Show, color |
+| Sunrise / Sunset | Show, color |
+| Chrome | Accent color, tick marks |
+
+Color / list pickers still use a live face preview with options on the left.
 
 ## Build and run
 
-Requires Java 17 (`brew install openjdk@17`), the Connect IQ SDK, the fenix 7X device downloaded in SDK Manager, and a developer key at `~/.garmin/developer_key.der`.
+Requires Java 17, the Connect IQ SDK, fenix 7X device defs, and `~/.garmin/developer_key.der`.
 
 ```bash
 ./build.sh        # builds bin/TactixMinimal.prg
-./build.sh run    # builds, starts the simulator, loads the face
+./build.sh run    # simulator
 ```
 
 ## Install (sideload)
 
-Connect the watch over USB, open [OpenMTP](https://openmtp.ganeshrvel.com/), and copy `bin/TactixMinimal.prg` into `GARMIN/APPS/`. Disconnect, then select **Tactix Minimal** under Watch Face.
+Copy `bin/TactixMinimal.prg` into `GARMIN/APPS/` with [OpenMTP](https://openmtp.ganeshrvel.com/), disconnect, select **Tactix Minimal** under Watch Face.

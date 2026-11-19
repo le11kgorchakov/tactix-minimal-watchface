@@ -1,24 +1,67 @@
 <properties>
-    <!-- 0 Digital, 1 Analog -->
+    <!-- 0 Tactix, 1 Military, 2 Casual, 3 Sport, 4 Stealth -->
+    <property id="Style" type="number">0</property>
+    <!-- 0 Digital, 1 Analog, 2 Hybrid -->
     <property id="DisplayMode" type="number">0</property>
-    <!-- 0 Olive Green, 1 Tactical Orange, 2 High-Vis Cyan, 3 White, 4 Red -->
+    <!-- Accent palette indices; see Settings.ACCENT_COLORS -->
     <property id="AccentColor" type="number">1</property>
-    <!-- 0 Match accent, 1 White, 2 Light Grey, 3 Olive Green, 4 Tactical Orange, 5 High-Vis Cyan, 6 Red -->
+
+    <!-- Field palette indices; see Settings.FIELD_COLORS -->
     <property id="HoursColor" type="number">1</property>
     <property id="MinutesColor" type="number">1</property>
-    <!-- 0 Condensed, 1 Bold, 2 Regular -->
+    <!-- 0 Condensed, 1 Bold, 2 Regular, 3 Roboto, 4 Kosugi -->
     <property id="TimeFont" type="number">0</property>
     <!-- 0 Small, 1 Medium, 2 Large, 3 Extra Large -->
-    <property id="HoursSize" type="number">2</property>
-    <property id="MinutesSize" type="number">2</property>
+    <property id="HoursSize" type="number">3</property>
+    <property id="MinutesSize" type="number">3</property>
     <property id="ShowColon" type="boolean">true</property>
-    <property id="ShowDate" type="boolean">true</property>
-    <!-- 0 MON · OCT 12, 1 Monday, Oct 12, 2 12 / OCT, 3 YYYY-MM-DD, 4 MM/DD/YY -->
-    <property id="DateFormat" type="number">0</property>
-    <!-- 0 Follow system, 1 Military (24h) -->
+    <!-- 0 System, 1 24h -->
     <property id="TimeFormat" type="number">1</property>
+
+    <property id="ShowDate" type="boolean">true</property>
+    <property id="DateColor" type="number">5</property>
+    <!-- 0 Short, 1 Long, 2 DD/MON, 3 ISO, 4 US -->
+    <property id="DateFormat" type="number">0</property>
+    <!-- 0 Compact … 4 Extra Large -->
+    <property id="DateFont" type="number">1</property>
+
     <property id="ShowBattery" type="boolean">true</property>
-    <property id="ShowBatteryDays" type="boolean">true</property>
-    <property id="ShowBatteryArc" type="boolean">true</property>
+    <property id="BatteryColor" type="number">1</property>
+    <property id="BatteryFont" type="number">0</property>
+    <property id="ShowBatteryDays" type="boolean">false</property>
+    <property id="ShowSecondsArc" type="boolean">true</property>
+    <!-- 0 Match accent … 6 Red -->
+    <property id="SecondsColor" type="number">0</property>
+
+    <property id="ShowSteps" type="boolean">true</property>
+    <property id="StepsColor" type="number">5</property>
+    <property id="StepsFont" type="number">0</property>
+    <property id="ShowStepsArc" type="boolean">true</property>
+
+    <property id="ShowHr" type="boolean">true</property>
+    <property id="HrColor" type="number">6</property>
+    <property id="HrFont" type="number">0</property>
+
+    <property id="ShowCalories" type="boolean">true</property>
+    <property id="CaloriesColor" type="number">4</property>
+    <property id="CaloriesFont" type="number">0</property>
+
+    <property id="ShowDistance" type="boolean">true</property>
+    <property id="DistanceColor" type="number">1</property>
+    <property id="DistanceFont" type="number">0</property>
+
+    <property id="ShowWeather" type="boolean">true</property>
+    <property id="WeatherColor" type="number">2</property>
+    <property id="WeatherFont" type="number">0</property>
+
+    <property id="ShowSun" type="boolean">true</property>
+    <property id="SunColor" type="number">2</property>
+    <property id="SunFont" type="number">0</property>
+
     <property id="ShowTicks" type="boolean">true</property>
+
+    <!-- 0 Black, 1 White -->
+    <property id="BackgroundColor" type="number">0</property>
+    <!-- 0 None, 1 Angry Bear, 2 Wolf, 3 Sniper Scope -->
+    <property id="BackgroundImage" type="number">0</property>
 </properties>
